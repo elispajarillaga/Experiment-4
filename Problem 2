@@ -1,0 +1,41 @@
+// Problem 2
+#include<iostream>
+
+using namespace std;
+
+int main ()
+{
+    int a, b, c,temp, arr[75];
+    cout << "Enter the array size: " << flush << endl;
+    cin >> a;
+    cout << "Enter the " << a << " elements:";
+    
+    for (b = 0; b < a; b ++)
+    {
+        cin >> arr[b];
+        cout << arr[0] << ", ";
+    }
+    
+    cout << '\n' << '\n';
+    for (b = 0; b < a; b ++)
+    {
+        for (c = 0; c < a - b - 1; c ++)
+        {
+            if (arr[c] > arr [c + 1])
+            {
+                temp = arr[c];
+                arr[c] = arr[c + 1];
+                arr[c + 1] = temp;
+            }
+        }
+    }
+    
+    cout << "Sorted Data: ";
+    
+    for (b = 0; b < a; b ++)
+    {
+        cout << arr[b] << ", ";
+    }
+    
+    return 0;
+}
