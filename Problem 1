@@ -1,0 +1,74 @@
+//Problem 1
+#include <iostream>
+#include<math.h>
+
+using namespace std;
+
+int main()
+{
+    char a;
+    double x,y;
+    int menu;
+    
+code:
+    cout << "MENU \n";
+    cout << "[1] Add \n" << "[2] Subtract \n" << "[3] Multiply \n" << "[4] Divide \n" << "[5] Modulus \n" << '\n';
+    cout << "Enter your choice (from 1 - 5): ";
+    cin >> menu;
+    cout << "Enter your two numbers: \n";
+    cin >> x;
+    cin >> y;
+    
+    cout << "\n";
+    cout << "\n";
+    
+    
+    switch(menu)
+    {
+        case 1:
+            cout << "Sum of two numbers: " << x + y;
+            cout << '\n';
+            break;
+            
+        case 2:
+            cout << "Difference of two numbers: " << x - y;
+            cout << '\n';
+            break;
+            
+        case 3:
+            cout << "Product of two numbers: " << x * y;
+            cout << '\n';
+            break;
+            
+        case 4:
+            cout << "Quotient of two numbers: " << x / y;
+            cout << endl;
+            break;
+            
+        case 5:
+            cout << "Absolute Value of two numbers: " << fabs(x) << " " << fabs(y);
+            cout << '\n';
+            break;
+            
+        default:
+            cout << "Value must be between 1 - 5 only.";
+            cout << '\n';
+            break;
+    }
+    
+    cout << "Continue? Press 'y' if yes or 'n' if no: ";
+    cin >> a;
+    
+    if(a == 'y' && a == 'Y')
+    {
+        system("cls");
+        goto code;
+    }
+    
+    if(a == 'n' && a == 'N')
+    {
+        cout << "Thank you!";
+    }
+    
+    return 0;
+}
